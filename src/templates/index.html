@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    
+    <title>What On Earth Email Templates</title>
+    
+    <style>
+    
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 16px;
+      background: #eee;
+      margin: 5%;
+    }
+    
+    .index {
+      text-align: left;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    
+    .index__item {
+      display: block;
+      padding: 20px;
+      background: #fff;
+    }
+    
+    .index__item + .index__item {
+      margin-top: 1px;
+    }
+    
+    </style>
+    
+  </head>
+  
+  <body>
+    
+    <div class="index">
+    {% for item in nav.children %}
+      <a class="index__item" href="{{item.href}}">{{item.title}}</a>
+    {% endfor %}
+    </div>
+    
+  </body>
+  
+</html>

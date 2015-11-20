@@ -4,6 +4,7 @@ var nunjucks = require('gulp-nunjucks-html');
 var inlinesource = require('gulp-inline-source');
 var sass = require('gulp-sass');
 var ghPages = require('gulp-gh-pages');
+var nav = require('gulp-nav');
 
 // Compile Sass
 gulp.task('sass', function() {
@@ -19,6 +20,7 @@ gulp.task('sass', function() {
 // Compile templates
 gulp.task('templates', function () {
   return gulp.src('src/templates/**.html')
+    .pipe(nav())
     .pipe(nunjucks({
       searchPaths: ['src/templates']
     }))
