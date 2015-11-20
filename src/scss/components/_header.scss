@@ -1,0 +1,33 @@
+.header {
+  background: color(orange);
+}
+
+.header__cell {
+	color:#ffffff;
+  background: color(orange);
+	font-family:Helvetica;
+	font-size:13px;
+	line-height:100%;
+	text-align:center;
+	vertical-align:top;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  @include mobile {
+    font-size: 10px !important;
+  }
+}
+
+.header--purple {
+  background: color(purple);
+  
+  .header__cell {
+    background: color(purple); 
+  }
+}
+

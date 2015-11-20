@@ -1,0 +1,58 @@
+body,
+.bodyTable,
+.bodyCell {
+	height: 100% !important;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+}
+
+body {
+  @include mobile {
+  	width: 100% !important;
+  	min-width: 100% !important; 
+  }
+}
+
+
+.bodyCell {
+	padding: 20px;
+  
+  @include mobile {
+    padding: 10px !important;
+  }
+}
+
+.templateContainer {
+	width: 600px;
+  
+  @include mobile {
+		width: 100% !important;
+  }
+}
+
+body, .bodyTable {
+	background-color: #f2f2f2;
+}
+
+/* Page */
+
+.page {
+	border-radius: 4px;
+	overflow: hidden;
+  background: #ffffff;
+}
+
+.padding {
+  padding-top: 30px;
+  padding-bottom:30px;
+  padding-right:35px;
+  padding-left:35px;
+  
+  @include mobile {
+		padding-top:22px !important;
+		padding-bottom:22px !important;
+		padding-left:18px !important;
+		padding-right:18px !important;
+  } 
+}
