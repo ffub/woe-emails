@@ -1,26 +1,34 @@
-.header {
-  background: color(orange);
-}
 
 .header__cell {
-	color:#ffffff;
-  background: color(orange);
-	font-family:Helvetica;
 	font-size:13px;
 	line-height:100%;
 	text-align:center;
 	vertical-align:top;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-weight: bold;
-  letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+/* Coloured headers */
+
+.header--orange,
+.header--purple {
+  background: color(orange);
   
-  @include mobile {
-    font-size: 10px !important;
+  .header__cell {
+    background: color(orange); 
+  	color:#ffffff;
+  	font-family:Helvetica;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    @include mobile {
+      font-size: 10px !important;
+    }
   }
+  
 }
 
 .header--purple {
@@ -29,5 +37,19 @@
   .header__cell {
     background: color(purple); 
   }
+}
+
+/* Chronicle header */
+
+.header--chronicle {
+  
+  .header__cell {
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  
 }
 

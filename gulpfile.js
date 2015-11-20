@@ -34,5 +34,10 @@ gulp.task('deploy', function() {
     .pipe(ghPages());
 });
 
+// Deploy to Github Pages
+gulp.task('build', ['sass'], function() {
+  gulp.start('templates');
+});
+
 // Default Task
-gulp.task('default', ['sass', 'templates']);
+gulp.task('default', ['build']);

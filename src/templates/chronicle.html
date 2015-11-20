@@ -1,0 +1,77 @@
+{% extends "layouts/newspaper.html" %}
+{% import "macros/articles.html" as articles %}
+
+{% block styles %}
+<link inline rel="stylesheet" href="../css/chronicle.css">
+{% endblock %}
+
+{% block page %}
+  
+  {% set src = 'https://gallery.mailchimp.com/bd21308ff39e5915fdbb2be35/images/d0868411-b35f-4727-9d74-7fc0b6f6fe9b.png' %}
+  
+  <table class="template" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" valign="top">
+                  
+        <!-- Masthead -->    
+        <table class="masthead" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td class="masthead__cell" align="center" valign="top" style="padding-bottom: 10px">
+              <a href="http://www.whatonearthbooks.com"><img class="masthead__image" src="{{src}}" width="582" height="132" alt="" style="vertical-align:bottom;"></a>
+            </td>
+          </tr>
+        </table>
+                    
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        
+        <!-- Chronicle Header -->
+        <table class="header header--chronicle" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td class="header__cell" align="center" valign="top">
+              The Latest News from What on Earth? Books
+            </td>
+          </tr>
+        </table>
+        
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        
+        {% set image = 'https://gallery.mailchimp.com/bd21308ff39e5915fdbb2be35/images/664c6681-c48e-413b-a669-68afa344fbad.jpg' %}
+        
+        <!-- Articles -->    
+        {% call articles.list(width=582, 'chronicle') -%}
+        
+          {% call articles.article(width=582, image=image) -%}
+          
+              <h1><a href="https://www.whatonearthbooks.com/blog/2015/11/what-on-earth-november-book-club-competition/">We’ve redesigned our wallbooks and they’re better than ever</a></h1>
+              <h5>Now in new bookshelf-friendly format with pull-out timelines and the all new Wallbook Chronicle</h5>
+              Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        
+          {%- endcall %}
+          
+          {% call articles.article(width=582) -%}
+        
+              <h1><a href="https://www.whatonearthbooks.com/blog/2015/11/what-on-earth-november-book-club-competition/">This is an article</a></h1>
+              Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        
+          {%- endcall %}
+        
+        {%- endcall %}
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        
+        {% include "components/footer-chronicle.html" %}
+        
+      </td>      
+    </tr>
+  </table>
+  
+{% endblock %}

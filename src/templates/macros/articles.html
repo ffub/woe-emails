@@ -1,0 +1,35 @@
+{% macro article(width=530, modifier, image='https://gallery.mailchimp.com/bd21308ff39e5915fdbb2be35/images/664c6681-c48e-413b-a669-68afa344fbad.jpg') %}
+  
+<!-- Repeater -->
+<tr mc:repeatable>
+  
+  <td align="center" valign="top" class="article">
+    
+    <img
+      class="article__image"
+      mc:edit="article_image"   src="{{image}}"
+      width="{{width}}" 
+      style="max-width: {{width}}; margin-bottom: 20px"
+      mc:label="article_image"
+      mc:allowdesigner=""
+      mc:allowtext="">
+      
+    <div class="article__text text" mc:edit="article_text" width="100%">
+      {{ caller() }}
+    </div>
+    
+  </td>
+  
+</tr>
+{% endmacro %}
+
+{% macro list(width=530, modifier) %}
+  
+<!-- Article list // -->
+<table class="article-list{% if modifier %} article-list--{{modifier}}{% endif %}" border="0" cellpadding="0" cellspacing="0" width="{{width}}">
+   
+   {{caller()}}
+  
+</table>  
+{% endmacro %}
+  

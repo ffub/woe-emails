@@ -1,7 +1,6 @@
 /* Footer */
 
 .footer {
-	background-color: #f2f2f2;
 }
 
 .footer__cell {
@@ -28,4 +27,8 @@
   	padding-left:15px !important;
   	padding-right:15px !important;
   }
+}
+
+.footer--chronicle {
+  border-top: 1px solid #333333 !important;
 }

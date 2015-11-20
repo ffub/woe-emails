@@ -1,6 +1,6 @@
 body,
-.bodyTable,
-.bodyCell {
+.body,
+.body__cell {
 	height: 100% !important;
 	margin: 0;
 	padding: 0;
@@ -14,8 +14,7 @@ body {
   }
 }
 
-
-.bodyCell {
+.body__cell {
 	padding: 20px;
   
   @include mobile {
@@ -23,7 +22,7 @@ body {
   }
 }
 
-.templateContainer {
+.template {
 	width: 600px;
   
   @include mobile {
@@ -31,8 +30,18 @@ body {
   }
 }
 
-body, .bodyTable {
+body, .body {
 	background-color: #f2f2f2;
+}
+
+.layout--newspaper, .body--newspaper {
+  background-color: #F8F8E8;
+}
+
+.layout--newspaper {
+  .template {
+  	width: 582px;
+  }
 }
 
 /* Page */

@@ -1,10 +1,18 @@
-.article-list {
+
+
+.article {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  
   @include mobile {
-    width: 100% !important;
+		padding-top:22px !important;
+		padding-bottom:22px !important;
   }
 }
 
-.article {
+.article--padded {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 35px;
@@ -18,9 +26,22 @@
   }
 }
 
+.article-list {
+  @include mobile {
+    width: 100% !important;
+  }
+}
+
 .article__image {
   @include mobile {
     width: 100% !important;
     height: auto !important;
+  }
+}
+
+.article-list--chronicle {
+  
+  tr + tr .article {
+    border-top: 2px dotted #bababa;
   }
 }

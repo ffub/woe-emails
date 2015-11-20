@@ -1,0 +1,88 @@
+
+h1 {
+  color: #222222 !important;
+  display: block;
+  font-family: "Rockwell", Helvetica, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 133%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  text-align: center;
+  
+  @include mobile {
+		font-size: 20px !important;
+		line-height: 133% !important;
+  }
+}
+
+h2 {
+  color: #222222 !important;
+  display: block;
+  font-family: "Rockwell", Helvetica, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 133%;
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  text-align: left;
+  
+  @include mobile {
+    font-size: 18px !important;
+  }
+}
+
+h5 {
+  color: #3B5865 !important;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 166%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  text-align: center;
+  
+  @include mobile {
+    font-size: 16px !important;
+  }
+}
+
+a {
+  color: #39A3BB !important;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+  a {
+    color: inherit !important;
+    font-weight: inherit;
+    text-decoration: none !important;
+    border-bottom: 1px solid #bababa;
+  }
+}
+
+.text {
+  color: #222222 !important;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: left;
+  vertical-align: top;
+  
+  @include mobile {    
+    img{
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+}
